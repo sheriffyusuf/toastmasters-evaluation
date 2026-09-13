@@ -34,6 +34,11 @@
   introduced in passing and never explained. It is now a full section (Section 4) with its
   own research grounding and its own drill. Lesson went from 4 drills to 5.
 
+- **Lesson 01 revised (2026-09-12)** — now 5 drills; Section 4 added on temporal
+  anchoring (the WHAT / WHEN / SO WHAT coordinates, the `anchor` term), grounded in
+  Kluger & DeNisi (1996), Shute (2008) and Wisniewski et al. (2020). First learning
+  record written: `learning-records/0001-reads-for-mechanism-not-coverage.md`.
+
 ## UI preferences (learned the hard way)
 
 - **Never hide a question inside a `placeholder` attribute.** Sheriff had to copy and paste
@@ -45,6 +50,24 @@
   open free-recall with no per-item structure.
 - Long lessons are welcome; long *unstructured* lessons are not. Break production work into
   per-item cards.
+
+## Publishing (GitHub Pages)
+
+- **Live at <https://sheriffyusuf.github.io/toastmasters-evaluation/>** — repo
+  `sheriffyusuf/toastmasters-evaluation`, branch `main`, root path, public.
+- Redeploy is just: `git add -A && git commit && git push`. Pages rebuilds in ~1–2 min.
+  Check with `gh api repos/sheriffyusuf/toastmasters-evaluation/pages --jq .status`
+  (want `built`).
+- **Repo-level `user.email` must stay
+  `51051827+sheriffyusuf@users.noreply.github.com`.** The global git email is not linked
+  to the GitHub account, so pushes are rejected with “email privacy restrictions”.
+  Do not remove this local override.
+- `.sources/` is gitignored on purpose: those are full-text extracts of Toastmasters
+  copyrighted documents. Verified not served
+  (`/.sources/202-effective-evaluation.txt` → 404). Every citing page links to the
+  official Toastmasters URL instead. Do not “helpfully” commit them.
+- `robots.txt` disallows all crawlers — this is a personal study site, not a publication.
+- `.nojekyll` is present so Pages serves files as-is.
 
 ## Working notes
 
@@ -60,6 +83,15 @@
   `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --disable-gpu
   --hide-scrollbars --window-size=1500,9000 --screenshot=/tmp/x.png "file://$PWD/path.html"`
   then crop with `sips -c H W --cropOffset Y X`.
+- **Chrome headless will not render below ~485 CSS px** — `--window-size=390,…` silently
+  renders at 485 and then crops the screenshot, which looks exactly like a horizontal
+  overflow bug. It is not. To QA real phone widths, embed the page in a 390px `<iframe>`
+  inside a wrapper page and screenshot *that*. Find genuine overflow by dumping the DOM
+  with an injected script that reports `documentElement.scrollWidth` and lists elements
+  whose `getBoundingClientRect().right` exceeds `clientWidth`.
 - To test JS behaviour, copy the page to `/tmp`, rewrite the asset paths to absolute
   `file://` paths, append a script that `.click()`s the widgets, and screenshot with
-  `--virtual-time-budget=4000`.
+  `--virtual-time-budget=4000`. `--dump-dom` plus a regex is the fastest way to confirm
+  JS-generated markup (nav chips, widget internals) actually rendered.
+- Asset paths in lessons are relative (`../assets/…`), which works unchanged on GitHub
+  Pages subpaths. Keep them relative — do not “fix” them to absolute `/assets/…`.
