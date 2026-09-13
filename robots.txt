@@ -1,0 +1,4 @@
+robots.txt — keep a personal study site out of search results.
+
+User-agent: *
+Disallow: /

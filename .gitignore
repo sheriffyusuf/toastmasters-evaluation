@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+._*
+
+# Local-only primary sources.
+# These are full-text extracts of Toastmasters International copyrighted documents,
+# kept locally so citations can be verified offline. They are NOT redistributed:
+# every citing page links to the official Toastmasters URL instead.
+.sources/
+
+# Editor / tooling
+.vscode/
+.idea/
+*.swp
+
+# Preview artefacts
+*.tmp.html
+/preview-*.png

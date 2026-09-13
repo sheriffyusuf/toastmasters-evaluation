@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Component gallery — course asset library</title>
+<link rel="stylesheet" href="course.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <p class="eyebrow">Asset library · not a lesson</p>
+  <h1>Component Gallery</h1>
+  <p class="subtitle">Every reusable component in this course, in one place. Copy the markup
+  from this file rather than rewriting it.</p>
+  <div class="metabar">
+    <span><b>Stylesheet:</b> <code>assets/course.css</code></span>
+    <span><b>Behaviour:</b> <code>assets/quiz.js</code></span>
+    <span><b>Rule:</b> reuse before you invent</span>
+  </div>
+</header>
+
+<div class="note">
+  <span class="label">How to use this page</span>
+  <p>Before authoring a new lesson, open this file. If the component you need exists, copy its
+  markup. If it does not, add it here <em>and</em> to <code>course.css</code> /
+  <code>quiz.js</code> before using it — never inline one-off styles into a lesson.</p>
+</div>
+
+<h2><span class="num">01</span>Typography &amp; structure</h2>
+
+<p class="lede">This is a <code>.lede</code> paragraph — used once, immediately after the
+masthead, to carry the hook.</p>
+
+<h2><span class="num">Section N</span>Heading level two</h2>
+<h3>Heading level three</h3>
+<h4>Heading level four (sans, uppercase — used for rubric sub-labels)</h4>
+
+<p>Body copy. Inline <strong>bold</strong>, <em>italic</em>, and a
+<citation>citation</citation> as <code>sup.cite</code>.<sup class="cite"><a href="#s1">1</a></sup></p>
+
+<blockquote>
+  <p>A pull quote. Use it when the exact words of a source matter more than your paraphrase.</p>
+  <cite>Source attribution line</cite>
+</blockquote>
+
+<h2><span class="num">02</span>Asides</h2>
+
+<div class="note">
+  <span class="label">Note</span>
+  <p>Neutral supplementary information. Grey, quiet.</p>
+</div>
+
+<div class="key">
+  <span class="label">Key idea</span>
+  <p>Something the learner must not miss. Maroon.</p>
+</div>
+
+<div class="warn">
+  <span class="label">Caution</span>
+  <p>A misconception, a trap, or a rule that is commonly broken. Red.</p>
+</div>
+
+<div class="try">
+  <span class="label">Try this</span>
+  <p>An instruction to act. Green.</p>
+</div>
+
+<p class="margin"><strong>Margin note.</strong> On wide screens this sits in the outer margin;
+on narrow screens it falls inline. Use for asides that would break the flow of an
+argument.</p>
+
+<h2><span class="num">03</span>Tables</h2>
+
+<table>
+  <thead><tr><th>Plain</th><th>Table</th></tr></thead>
+  <tbody>
+    <tr><td>Column one</td><td>Column two</td></tr>
+    <tr><td>Second row</td><td>Second row</td></tr>
+  </tbody>
+</table>
+
+<table class="compare">
+  <thead><tr><th>Red column (bad)</th><th>Green column (good)</th></tr></thead>
+  <tbody>
+    <tr><td>Add <code>.compare</code> for two-way contrasts.</td><td>The second column is tinted green.</td></tr>
+  </tbody>
+</table>
+
+<h2><span class="num">04</span>The ladder</h2>
+
+<p>Use <code>.ladder &gt; .rung[data-level="N"]</code> for any 1–5 scale. The score colour is
+driven by <code>data-level</code>.</p>
+
+<div class="ladder">
+  <div class="rung" data-level="5"><div class="score">5</div>
+    <div><span class="rungname">Exemplary</span><p>Description text.</p></div></div>
+  <div class="rung" data-level="4"><div class="score">4</div>
+    <div><span class="rungname">Excels</span><p>Description text.</p></div></div>
+  <div class="rung" data-level="3"><div class="score">3</div>
+    <div><span class="rungname">Accomplished</span><p>Description text.</p></div></div>
+  <div class="rung" data-level="2"><div class="score">2</div>
+    <div><span class="rungname">Emerging</span><p>Description text.</p></div></div>
+  <div class="rung" data-level="1"><div class="score">1</div>
+    <div><span class="rungname">Developing</span><p>Description text.</p></div></div>
+</div>
+
+<h3>Ladder variant without level names</h3>
+<div class="ladder">
+  <div class="rung" data-level="3"><div class="score">1</div>
+    <div><span class="rungname">Step name</span><p>Used for ordered processes rather than
+    scores.</p></div></div>
+</div>
+
+<h2><span class="num">05</span>Exercise wrappers</h2>
+
+<p>Three colour variants via a class on <code>.exercise</code>: default (blue),
+<code>.drill</code> (maroon), <code>.goal</code> (green).</p>
+
+<div class="exercise">
+  <header><span class="tag">Tag line</span><span class="name">Default blue exercise</span></header>
+  <div class="body"><p>Body content goes here.</p></div>
+</div>
+
+<div class="exercise drill">
+  <header><span class="tag">Drill 1 · Type of practice</span><span class="name">Maroon drill</span></header>
+  <div class="body"><p>Body content goes here.</p></div>
+</div>
+
+<div class="exercise goal">
+  <header><span class="tag">Field work</span><span class="name">Green real-world task</span></header>
+  <div class="body"><p>Body content goes here.</p></div>
+</div>
+
+<h2><span class="num">06</span>Quiz widget</h2>
+
+<p>Markup: <code>[data-quiz]</code> container, <code>.quiz__item[data-answer="INDEX"]</code>
+with <code>data-why-right</code> / <code>data-why-wrong</code>, prompt, options. The script
+adds numbering, the score line, and a reset button automatically.</p>
+
+<div class="exercise drill">
+  <header><span class="tag">Demo</span><span class="name">Two-item quiz</span></header>
+  <div class="body">
+    <div class="quiz" data-quiz>
+      <div class="quiz__item" data-answer="1"
+           data-why-right="Yes — this is feedback. It reports an observation."
+           data-why-wrong="No — “I noticed” is the giveaway. It reports what the evaluator saw.">
+        <p class="quiz__prompt">“I noticed you were shaking at the start.”</p>
+        <div class="quiz__opts">
+          <button type="button" class="quiz__opt">Advice</button>
+          <button type="button" class="quiz__opt">Feedback</button>
+        </div>
+        <p class="quiz__fb" hidden></p>
+      </div>
+      <div class="quiz__item" data-answer="0"
+           data-why-right="Yes — “you need to” makes it an opinion about what to do."
+           data-why-wrong="No — “you need to” is a directive, so it is advice.">
+        <p class="quiz__prompt">“You need to make more eye contact.”</p>
+        <div class="quiz__opts">
+          <button type="button" class="quiz__opt">Advice</button>
+          <button type="button" class="quiz__opt">Feedback</button>
+        </div>
+        <p class="quiz__fb" hidden></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2><span class="num">07</span>Reveal widget</h2>
+
+<div data-reveal-box class="reveal">
+  <button type="button" data-reveal
+          data-label-show="Show the model answer"
+          data-label-hide="Hide the model answer">Show the model answer</button>
+  <div class="reveal__body" hidden>
+    <p>The hidden content. Always write model answers here — revealing nothing is a missed
+    opportunity for the learner to compare their attempt against a standard.</p>
+  </div>
+</div>
+
+<h2><span class="num">08</span>Recall widget (autosaving)</h2>
+
+<div class="recall" data-recall data-key="gallery-demo">
+  <h4>Free recall prompt</h4>
+  <p style="font-size:.9rem;color:var(--ink-soft)">Ask the learner to write before they
+  scroll.</p>
+  <textarea placeholder="Type here — autosaves to this device via localStorage."></textarea>
+  <p class="recall__actions"><span style="font-family:var(--sans);font-size:.72rem;color:var(--ink-faint)">Autosaves on this device.</span></p>
+</div>
+
+<h2><span class="num">09</span>Checklist and tally</h2>
+
+<ul class="checklist" data-checklist data-key="gallery-checklist">
+  <li><label><input type="checkbox"><span>Milestone one — state persists across sessions.</span></label></li>
+  <li><label><input type="checkbox"><span>Milestone two.</span></label></li>
+  <li><label><input type="checkbox"><span>Milestone three.</span></label></li>
+</ul>
+
+<div class="tally" data-tally data-key="gallery-tally">
+  <div class="tally__btn" data-kind="feedback" role="button" tabindex="0">
+    <span class="t-count">0</span><span class="t-label">Feedback</span>
+  </div>
+  <div class="tally__btn" data-kind="advice" role="button" tabindex="0">
+    <span class="t-count">0</span><span class="t-label">Advice</span>
+  </div>
+</div>
+
+<h2><span class="num">10</span>Rewrite widget (per-item drill)</h2>
+
+<p>Use this <strong>instead of</strong> <code>.recall</code> whenever the learner must respond to
+specific items. Each item keeps its own prompt permanently visible above its own answer field,
+so the learner never has to scroll back or copy the question. Autosaves per field; each item has
+its own reveal.</p>
+
+<div class="rewrite" data-rewrite data-key="gallery-rewrite">
+  <div class="rewrite__item">
+    <div class="rewrite__head">
+      <span class="rewrite__n">Advice 1</span>
+      <p class="rewrite__advice">“You need to relax.”</p>
+    </div>
+    <div class="rewrite__body">
+      <label>Your feedback version</label>
+      <textarea class="rewrite__input" placeholder="What did you see, when did you see it, and what did it do to you?"></textarea>
+      <div class="rewrite__bar">
+        <button type="button" data-item-reveal>Show model answer</button>
+      </div>
+      <div class="rewrite__model" hidden>
+        <span class="lbl">Model answer</span>
+        <p>“For the first forty seconds you were shifting your weight from foot to foot.”</p>
+        <p class="coords"><b>WHAT</b> weight shifting · <b>WHEN</b> the first forty seconds ·
+        <b>SO WHAT</b> implied by the contrast</p>
+      </div>
+    </div>
+  </div>
+  <div class="rewrite__all">
+    <button type="button" data-reveal-all>Show all model answers</button>
+  </div>
+</div>
+
+<h2><span class="num">11</span>Footer furniture</h2>
+
+<div class="sources">
+  <h3>Sources</h3>
+  <ol>
+    <li id="s1"><a href="#">Source entry with a link</a>.
+      <span class="why">And a “use for” note in <code>.why</code>.</span></li>
+  </ol>
+</div>
+
+<nav class="lessonnav">
+  <a href="../lessons/0001-you-are-not-a-judge.html">Lesson 01</a>
+  <a href="../reference/0001-glossary.html">Glossary</a>
+  <a class="next" href="../RESOURCES.md">Next →</a>
+</nav>
+
+<div class="askteacher">
+  <p><strong>Ask your teacher anything.</strong> Standard closing block for every lesson.</p>
+</div>
+
+</div>
+<script src="quiz.js"></script>
+</body>
+</html>
