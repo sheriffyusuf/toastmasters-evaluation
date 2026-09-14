@@ -31,19 +31,46 @@
   word **anchor**. The underlying rules are official (“be specific”); the framing is mine.
   Sheriff reads closely and will notice uncited claims — do not blur the line.
 - **Lesson 01 revised (2026-09-11)** after Sheriff flagged that “locate it in time” was
-  introduced in passing and never explained. It is now a full section (Section 4) with its
-  own research grounding and its own drill. Lesson went from 4 drills to 5.
+  introduced in passing and never explained. *Superseded — see 2026-09-14.*
 
-- **Lesson 01 revised (2026-09-12)** — now 5 drills; Section 4 added on temporal
-  anchoring (the WHAT / WHEN / SO WHAT coordinates, the `anchor` term), grounded in
-  Kluger & DeNisi (1996), Shute (2008) and Wisniewski et al. (2020). First learning
-  record written: `learning-records/0001-reads-for-mechanism-not-coverage.md`.
+- **Lesson 01 revised (2026-09-12)** — 5 drills; a full Section 4 on temporal anchoring
+  (the WHAT / WHEN / SO WHAT coordinates, the `anchor` term), grounded in Kluger & DeNisi
+  (1996), Shute (2008) and Wisniewski et al. (2020). First learning record written:
+  `learning-records/0001-reads-for-mechanism-not-coverage.md`. *Superseded — see
+  2026-09-14.*
+
+- **Lesson 01 reverted and trimmed (2026-09-14)** after Sheriff compared the revised lesson
+  against the previous version and rejected the revision as fluff. Restored the original
+  five-section structure, 4 drills, 4 sources and short checklist. What was cut: the
+  “uncomfortable finding” meta-analysis passage, the attention-hierarchy mechanism, the
+  “what the research says about specificity” section, the sourcing meta-note, the four-jobs
+  breakdown, the counting sub-section, the before/after table, the “when you cannot anchor”
+  section, the invented “The Last Bus” running example, the 6-item anchoring drill, and the
+  second tally. What was kept: a **compact** “put it in time” subsection inside Section 3
+  (one example, the anchor test, the three coordinates, one sentence on counting), because
+  the anchoring explanation was an explicit request. Research depth now lives in
+  `reference/0001-glossary.html` §F (the evidence base) and `RESOURCES.md` — **not** in
+  lesson prose. Full reasoning in `learning-records/0002-depth-is-not-sprawl.md`.
 
 ## UI preferences (learned the hard way)
 
+- **Structure discipline (2026-09-14).** A lesson is **5 sections maximum, 4 drills
+  maximum**. Do not add a new section for an edge case, a research aside, or a concept that
+  fits as a subsection. Sheriff reads for mechanism and rejects sprawl: “so much fluff and so
+  many sections [that] don't make sense.” Depth means every claim explained, not every
+  related finding included. Research citations belong in the glossary's evidence base, not
+  in the lesson narrative — the lesson should be usable standing up at a club meeting.
+- **No invented running examples** unless they *replace* generic examples rather than add
+  to them. The “Last Bus” timeline plus its two rewrite drills was cut for exactly this
+  reason: more material, no new mechanism.
 - **Never hide a question inside a `placeholder` attribute.** Sheriff had to copy and paste
   repeatedly to keep the prompt visible while writing. In the first version of Drill 3, five
   prompts lived in one textarea's placeholder — unusable.
+- **Widget styling lives on the wrapper class.** `data-recall` / `data-rewrite` only boot
+  the JS; the look comes from `.recall` / `.rewrite`. Drill 1 shipped without
+  `class="recall"`, so the textarea fell back to browser defaults (tiny monospace box).
+  When copying markup out of `assets/components.html`, copy the classes too. Use
+  `.recall--tall` when a recall prompt has several parts (Drill 1's four questions).
 - **One answer field per prompt.** Built the `.rewrite` component for this
   (`assets/course.css` + `initRewrite` in `assets/quiz.js`). Use `.rewrite` instead of
   `.recall` whenever the learner must respond to *specific* items. `.recall` is only for

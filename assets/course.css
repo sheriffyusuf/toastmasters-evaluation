@@ -609,6 +609,9 @@ table.compare th:last-child { color: var(--good); }
   outline: 2px solid var(--tm-blue);
   outline-offset: 1px;
 }
+/* Use when the recall prompt has several parts and the learner will write
+   more than a few lines (e.g. four questions recalled in one sitting). */
+.recall--tall textarea { min-height: 12rem; }
 .recall .saved {
   font-family: var(--sans);
   font-size: 0.72rem;
