@@ -15,7 +15,7 @@
   var MANIFEST = {
     lessons: [
       { n: "01", file: "0001-you-are-not-a-judge", title: "You Are Not a Judge" },
-      { n: "02", file: null, title: "The Anatomy of a Speech" },
+      { n: "02", file: "0002-the-anatomy-of-a-speech", title: "The Anatomy of a Speech" },
       { n: "03", file: null, title: "Content: Purpose and Structure" },
       { n: "04", file: null, title: "Voice: Pitch, Tone, Volume, Pace" },
       { n: "05", file: null, title: "Body Language" },

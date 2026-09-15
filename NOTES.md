@@ -52,6 +52,22 @@
   `reference/0001-glossary.html` §F (the evidence base) and `RESOURCES.md` — **not** in
   lesson prose. Full reasoning in `learning-records/0002-depth-is-not-sprawl.md`.
 
+- **Lesson 02 written (2026-09-15)** — “The Anatomy of a Speech”. 5 sections, 4 drills, 6
+  sources. Shape: (1) the official form as a map, plus Item 202's warning against letting the
+  mechanical criteria overshadow the purpose; (2) the two families — content versus delivery —
+  with four mechanisms for why the split matters; (3) the delivery half, criterion by criterion
+  (voice / body / connection), each with what it adds and what its absence costs; (4) the
+  content half — purpose, structure, interest, the official two-axis definition of Interest at
+  level 2, and three reasons evaluators miss content faults; (5) the 2–3 point budget and the
+  **order of repair**, with the “it changed what you received” rule as the delivery filter.
+  Glossary §A gained four rows: **content**, **delivery** (with the voice/body/connection
+  grouping), the **reconstruction test** and the **order of repair** — the last two explicitly
+  marked as course terms, following the same honesty rule as *anchor* and the *three
+  coordinates*. The delivery criteria are deliberately left at map depth, because Lessons 03–05
+  go deep on content, voice and body; the lesson's job is the map and the priority order, not
+  the mechanisms of pitch or gesture. Lesson 01's next-link, `course-map.js`, the index roadmap
+  and README were updated in the same pass.
+
 ## UI preferences (learned the hard way)
 
 - **Structure discipline (2026-09-14).** A lesson is **5 sections maximum, 4 drills
