@@ -68,6 +68,17 @@
   the mechanisms of pitch or gesture. Lesson 01's next-link, `course-map.js`, the index roadmap
   and README were updated in the same pass.
 
+- **Lesson 02 condensed (2026-09-15)** — Sheriff read it and said the read felt too long. Cut
+  the read from ~5,000 words to ~3,300 (drills untouched), against Lesson 01's ~2,900. What went:
+  the four no-cost benefits of the map down to two; the Quick Card reconciliation from its own
+  section to a parenthetical; the four mechanisms in Section 2 down to three ("neither family
+  rescues the other" folded into the relationship-criteria mechanism); the official-shape detail
+  in the structure subsection (opening/body/conclusion and the five transition points moved out to
+  Lesson 03's territory); and most repeated illustrations. What stayed: every criterion with what
+  it adds and what its absence costs, the two-axis Interest ladder, the reconstruction test, the
+  order of repair, and all course-term honesty flags. Rule for future lessons: aim for a read
+  around 3,000 words — Lesson 01's length is the calibration point, not the ceiling.
+
 ## UI preferences (learned the hard way)
 
 - **Structure discipline (2026-09-14).** A lesson is **5 sections maximum, 4 drills
