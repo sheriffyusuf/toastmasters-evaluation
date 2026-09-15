@@ -79,6 +79,28 @@
   order of repair, and all course-term honesty flags. Rule for future lessons: aim for a read
   around 3,000 words — Lesson 01's length is the calibration point, not the ceiling.
 
+- **Lesson 03 written (2026-09-15)** — "Purpose and Structure". 5 sections, 4 drills, 3 sources,
+  read ~3,500 words by the same counter that puts Lesson 02 at ~3,400. Shape: (1) purpose as a
+  contract (the four general purposes and their mismatch signatures) and then a standard (the
+  specific-purpose tests, topic versus purpose, the three small questions, and the
+  absent-versus-undelivered fork); (2) structure as the route — the official shape as three jobs
+  plus transitions, with the mechanism for why a missing bridge deletes each section's opening;
+  (3) the seven named structures with one characteristic failure each, plus the purpose-driven
+  constraint as the eighth, and an explicit note that the seven names are Toastmasters' while the
+  count of eight is the course's; (4) deliberate versus accidental structure as five checks —
+  shape test, predictability, proportion, the return, the joints; (5) the diagnosis: the
+  three-way fork, a five-step procedure, phrase patterns, and naming strengths with the same
+  precision. Drill 2 uses 8103's own structure exercise — the official scenarios and answers —
+  plus five purpose-or-structure symptoms. Drill 4 is a field chart: tally transitions against
+  unannounced moves, then reconstruct the purpose sentence, route, structure name and anchor.
+- **Glossary extended (2026-09-15)**: §A gained one row, **shape test** (course term) — the
+  structure counterpart of the reconstruction test. `assets/course.css` gained two `.tally__btn`
+  colour rules for the new `transition` / `no-transition` kinds.
+- **Citation corrected (2026-09-15)**: the "very clear idea of what you want to say" quote in
+  Lesson 02 was cited as 8103 p. 12; the pdftotext extract places it on p. 13. Fixed inline and
+  in the source note, and the 8103 source note now lists p. 12 for transitions and p. 13 for
+  purpose.
+
 ## UI preferences (learned the hard way)
 
 - **Structure discipline (2026-09-14).** A lesson is **5 sections maximum, 4 drills

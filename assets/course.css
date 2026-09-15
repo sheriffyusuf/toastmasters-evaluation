@@ -568,6 +568,8 @@ table.compare th:last-child { color: var(--good); }
 }
 .tally__btn[data-kind="feedback"] { border-color: var(--good); color: var(--good); }
 .tally__btn[data-kind="advice"] { border-color: var(--bad); color: var(--bad); }
+.tally__btn[data-kind="transition"] { border-color: var(--tm-blue); color: var(--tm-blue); }
+.tally__btn[data-kind="no-transition"] { border-color: var(--bad); color: var(--bad); }
 .tally__btn:active { transform: translateY(1px); }
 .tally__reset {
   font-family: var(--sans);
