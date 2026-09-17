@@ -101,6 +101,93 @@
   in the source note, and the 8103 source note now lists p. 12 for transitions and p. 13 for
   purpose.
 
+- **Lesson 04 written (2026-09-16)** — "Voice: Pitch, Tone, Volume, Pace". 5 sections, 4 drills,
+  4 sources (8104, 199, 8100, 202), read ~3,840 words on the same counter that puts Lesson 03 at
+  ~3,470. Shape: (1) the voice as a second text — the three jobs it does that words cannot, the
+  **two scores versus five tools** distinction (Clarity and Vocal Variety are scored; pitch, tone,
+  volume, pace and pause are the parts you inspect), and the **flat-read test**; (2) vocal variety
+  tool by tool — pitch, tone, volume, pace, pause, each with what it controls and the signature of
+  its failure; (3) Clarity as the access criterion — articulation's two halves (pronunciation,
+  enunciation) and the three conditions as a diagnostic sequence, with breath identified as the
+  cause shared with weak projection; (4) six distinctions that change the fix (monotone vs narrow
+  range, pitch vs tone, inaudible vs fading vs soft-on-purpose, fast vs jerky, slow vs hesitant,
+  deliberate variety vs undirected variation); (5) symptom → cause → finding, built on Item 199's
+  tension mechanism, plus the **Speech Profile** as the observation instrument and phrase patterns.
+  Drills: retrieval; a 12-item discrimination quiz where every item forces one of Section 4's
+  distinctions; five rewrites of vague voice comments (the fourth is a deliberately wrong *verdict*
+  rather than wrong advice, and the fifth is a vacuous compliment); and field work in which the
+  learner records two minutes of themselves, tallies varied-vs-flat, then rates all six Speech
+  Profile dimensions and forces one cause to explain two symptoms.
+
+- **Length call on Lesson 04.** It came out ~370 words longer than Lesson 03 and above the soft
+  ceiling implied by the Lesson 02 condense note. This was a deliberate decision, not drift: the
+  lesson carries five tools *plus* Clarity *plus* the six distinctions *plus* the Profile, and two
+  of its blocks (the Profile table, the phrase patterns) are reference furniture meant to be used
+  standing up rather than read as prose. What *was* cut before shipping was duplicate summary: a
+  five-tool map table restating the subsections, a separate "declared focus" section folded into
+  the instrument discussion, and the mumblitis aside. If Sheriff flags the read as long again, the
+  first candidates are Section 4's table (its content is already stated inside Section 2) and the
+  Section 1 blockquote glosses.
+
+- **Glossary extended (2026-09-16)**: §A gained one row, **flat-read test** (course term) — read
+  one line back with the pitch flattened; whatever drops out of the meaning was carried by the
+  voice. It is the voice counterpart of the reconstruction test and the shape test. §B already
+  carried pitch, tone, volume, pace, pause, inflection, projection, articulation, pronunciation,
+  enunciation, voice quality, phonation and resonation, so Lesson 04 invented no new vocabulary —
+  it borrows §B wholesale, which is the intended pattern.
+- **CSS**: two `.tally__btn` colours added for the new `varied` / `flat` kinds (green / red).
+- **Citation note**: the "two or three points" cap is attributed to both 202 and 8100 (the quote is
+  8100's; the rule is in both). No page drift found in 8104 or 199.
+- **Nav/course-map/index/README updated in the same pass**: `course-map.js` 04 now has a file,
+  Lesson 03's next-link points to 04, and the index metabar reads 4 of 9.
+
+- **Citations name the work, never the item number (2026-09-17).** This **supersedes** the
+  2026-09-16 entry that made markers carry item numbers (`199`, `8104`, `202`). Sheriff's second
+  read found the remaining flaw in that scheme: in Lesson 04 the *prose* said “Item 199” thirty-one
+  times, including in sentences like “Item 8104's *tone* and Item 199's *voice quality* are one
+  instrument with two names”. He did not know those were references at all — an item number is a
+  purchase code, not a name. The convention now:
+  * **One name per document, used identically in prose, markers and the sources list.** No prose
+    form and no citation form, so there is nothing to translate. Short titles: `Your Speaking
+    Voice`, `Effective Evaluation`, `Evaluation and Feedback`, `Ice Breaker`, `Writing a Speech
+    With Purpose`, `Fundamentals of Public Speaking`, `Evaluation Contest Judge's Guide and
+    Ballot`, and — the only shortened one — **`Vocal Variety and Body Language`** for Item 8104,
+    because its real title is six words and Lesson 04 names it fifteen times. Shortening is only
+    ever dropping a leading phrase, so the name stays a contiguous substring of the real title.
+    Magazine articles use their real title in quotes; research papers keep author–year
+    (`Shute 2008`, `Kluger & DeNisi 1996`, `Wisniewski et al. 2020`), which is already a name.
+  * **Item numbers appear only in `.sources` and in `title` attributes.** Never in reading text.
+    Mechanically checkable on content pages: every `Item \d{3,4}` hit in `lessons/` and
+    `reference/` must be inside one of those two contexts. (`assets/components.html` is the
+    authoring gallery — it names item numbers on purpose, to document this mapping.)
+  * **Pages live in the `title` attribute only**, never in the marker text. The marker answers
+    “which document”; the page is what you want only after you decide to verify. This also removed
+    the old follow-up of extending visible page numbers to Lessons 01–03 — that work is now
+    unnecessary, not deferred.
+  * **One marker per source per paragraph**, at that source's last quotation, with the pages
+    folded into one `title` (`pp. 3, 5`). Without page numbers in the marker text, a second marker
+    for the same source in the same paragraph was a pure duplicate. Different sources in one
+    paragraph keep separate markers.
+  * **The `.citekey` masthead line is gone**, along with its CSS. It existed to decode opaque
+    markers; self-describing markers made it dead weight, and the sources list at the foot is
+    still the ground truth. Lesson 04's masthead now runs straight into the lede.
+  * **Prose titles use `<i>`, terms and criteria keep `<em>`.** Both render italic; the markup
+    keeps them distinguishable for the next editor.
+  * **Repeat mentions use pronouns.** Naming a work five times in a paragraph is what made the old
+    item-number scheme feel necessary. Fixed by writing “the two manuals”, “it”, “the project”
+    instead.
+  Applied by a throwaway script plus hand rewrites for the four sentences where a possessive on a
+  long title read badly — the durable mechanism is `assets/components.html` → §01 “Citations”.
+  (The script is deliberately not kept: it is not idempotent, and a naive re-run would double
+  labels. The rules above are the source of truth.) Verified: 0 visible `Item N` outside
+  `.sources`/`title` on content pages, 145 markers with 0 bare-numeral labels, all 7 pages plus
+  the gallery and index parse clean, no horizontal overflow at 375 px, and the only over-width
+  elements are inside `.table-scroll` (the known-good pattern).
+  * **Trap for the next agent:** quiz explanations live in `data-why-right` / `data-why-wrong`
+    attributes and are rendered with `fb.textContent`, so text there is **plain** — writing
+    `<i>Your Speaking Voice</i>` into one would print the tags literally. The sweep script handles
+    this special case; keep it in mind for new drills.
+
 ## UI preferences (learned the hard way)
 
 - **Structure discipline (2026-09-14).** A lesson is **5 sections maximum, 4 drills

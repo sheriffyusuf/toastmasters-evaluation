@@ -186,15 +186,22 @@ hr {
   margin: 2.5rem 0;
 }
 
-/* Superscript citations */
+/* Superscript citations.
+   The marker names its source (the work title, never a catalogue number) so it can be
+   read without scrolling to the sources list; `title` carries the full reference with
+   the item number and page. There is no masthead key: the marker is self-describing. */
 sup.cite {
   font-family: var(--sans);
-  font-size: 0.66rem;
+  font-size: 0.6rem;
   font-weight: 700;
   line-height: 0;
   vertical-align: super;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
 }
 sup.cite a { text-decoration: none; color: var(--tm-maroon); }
+sup.cite a:hover, sup.cite a:focus { text-decoration: underline; }
+sup.cite .sep { color: var(--ink-faint); font-weight: 400; }
 
 /* -------------------------------------------------------------- blockquote -- */
 
@@ -206,6 +213,13 @@ blockquote {
   color: var(--ink-soft);
 }
 blockquote p:last-child { margin-bottom: 0; }
+blockquote cite a {
+  color: var(--tm-maroon);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule-strong);
+}
+blockquote cite a:hover, blockquote cite a:focus { border-bottom-color: var(--tm-maroon); }
+
 blockquote cite {
   display: block;
   font-family: var(--sans);
@@ -570,6 +584,8 @@ table.compare th:last-child { color: var(--good); }
 .tally__btn[data-kind="advice"] { border-color: var(--bad); color: var(--bad); }
 .tally__btn[data-kind="transition"] { border-color: var(--tm-blue); color: var(--tm-blue); }
 .tally__btn[data-kind="no-transition"] { border-color: var(--bad); color: var(--bad); }
+.tally__btn[data-kind="varied"] { border-color: var(--good); color: var(--good); }
+.tally__btn[data-kind="flat"] { border-color: var(--bad); color: var(--bad); }
 .tally__btn:active { transform: translateY(1px); }
 .tally__reset {
   font-family: var(--sans);
@@ -809,6 +825,26 @@ code {
   border-radius: 3px;
   border: 1px solid var(--rule);
   word-break: break-word;
+}
+
+pre {
+  background: var(--paper-sunk);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 0.9rem 1rem;
+  margin: 1rem 0 1.4rem;
+  overflow-x: auto;
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+pre code {
+  background: none;
+  border: 0;
+  padding: 0;
+  border-radius: 0;
+  font-size: 1em;
+  white-space: pre;
+  word-break: normal;
 }
 
 /* ============================================================ course home = */

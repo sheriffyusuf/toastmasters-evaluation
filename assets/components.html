@@ -38,11 +38,61 @@ masthead, to carry the hook.</p>
 <h4>Heading level four (sans, uppercase — used for rubric sub-labels)</h4>
 
 <p>Body copy. Inline <strong>bold</strong>, <em>italic</em>, and a
-<citation>citation</citation> as <code>sup.cite</code>.<sup class="cite"><a href="#s1">1</a></sup></p>
+<citation>citation</citation> as <code>sup.cite</code>.<sup class="cite"><a href="#s1" title="Effective Evaluation (Item 202)">Effective Evaluation</a></sup></p>
+
+<h3>Citations</h3>
+
+<p><strong>One name per document, and it is never a catalogue number.</strong> Item numbers
+(<code>199</code>, <code>8104</code>) tell the reader nothing mid-sentence — they are purchase
+codes. The reader sees <em>Effective Evaluation</em> in the prose and the same string in the
+marker next to the quotation, so no lookup is needed and nothing has to be decoded.</p>
+
+<pre><code>&lt;sup class="cite"&gt;&lt;a href="#s1" title="Effective Evaluation (Item 202), p. 5"&gt;Effective Evaluation&lt;/a&gt;&lt;/sup&gt;
+
+&lt;sup class="cite"&gt;&lt;a href="#s1" title="…"&gt;Vocal Variety and Body Language&lt;/a&gt;
+  &lt;span class="sep"&gt;·&lt;/span&gt;
+  &lt;a href="#s2" title="…"&gt;Your Speaking Voice&lt;/a&gt;&lt;/sup&gt;</code></pre>
+
+<p>Rules, in order of how often they are broken:</p>
+<ol>
+  <li><strong>Names.</strong> An item's short title (<code>Effective Evaluation</code>,
+  <code>Evaluation and Feedback</code>, <code>Your Speaking Voice</code>, <code>Ice Breaker</code>,
+  <code>Writing a Speech With Purpose</code>, <code>Fundamentals of Public Speaking</code>,
+  <code>Vocal Variety and Body Language</code> for Item 8104,
+  <code>Evaluation Contest Judge's Guide and Ballot</code>). Magazine articles use their real
+  title in quotes; research papers use author–year (<code>Shute 2008</code>).</li>
+  <li><strong>Never an item number in reading text.</strong> Numbers appear only in the
+  <code>.sources</code> list at the foot of the page and inside <code>title</code> attributes.
+  Check every page in <code>lessons/</code> and <code>reference/</code> with
+  <code>grep -o 'Item [0-9]\{3,4\}'</code> — each hit must be in one of those two places. (This
+  gallery is the exception: it names item numbers deliberately, to document the mapping.)</li>
+  <li><strong>Pages go in the <code>title</code>, never in the marker text.</strong> The marker's
+  job is “which document”; the page is what you want only once you have decided to check.</li>
+  <li><strong>One marker per source per paragraph</strong>, at that source's last quotation; fold
+  the pages into one <code>title</code> (<code>pp. 3, 5</code>). Two different sources in one
+  paragraph keep two markers.</li>
+  <li><strong>In prose, use <code>&lt;i&gt;</code> for a work title</strong> and reserve
+  <code>&lt;em&gt;</code> for terms and criteria, so a title can be told from an emphasised word in
+  the markup even though both render italic.</li>
+  <li><strong>Repeat mentions take pronouns, not a second name.</strong> Name the work when the
+  referent needs establishing; after that write “the two manuals”, “it”, “the project”.</li>
+</ol>
+
+<p>There is <strong>no masthead key</strong>. Markers are self-describing, so the old
+<code>.citekey</code> decoder line was removed along with its CSS.</p>
+
+<p>A blockquote attribution does <em>not</em> take a marker — the attribution <em>is</em> the
+citation, so link the work title and leave the item number out:</p>
+
+<pre><code>&lt;cite&gt;Toastmasters International, &lt;a href="#s1"&gt;&lt;i&gt;Effective Evaluation&lt;/i&gt;&lt;/a&gt;, p. 3&lt;/cite&gt;</code></pre>
+
+<p>Rendered, the marker and the attribution look like this:</p>
+
+<p><em>Effective Evaluation</em> insists the comment must be specific.<sup class="cite"><a href="#s1" title="Effective Evaluation (Item 202, Rev. 6/2011), p. 4">Effective Evaluation</a></sup></p>
 
 <blockquote>
   <p>A pull quote. Use it when the exact words of a source matter more than your paraphrase.</p>
-  <cite>Source attribution line</cite>
+  <cite>Toastmasters International, <a href="#s1"><i>Effective Evaluation</i></a>, p. 3</cite>
 </blockquote>
 
 <h2><span class="num">02</span>Asides</h2>
@@ -209,6 +259,11 @@ field starts at 12rem instead of 6.5rem.</p>
     <span class="t-count">0</span><span class="t-label">Advice</span>
   </div>
 </div>
+
+<p>The look is driven by <code>data-kind</code>, so a new tally needs its kinds added to
+<code>course.css</code> — the button has no colour of its own. Kinds in use: <code>feedback</code>,
+<code>advice</code> (Lesson 01), <code>transition</code>, <code>no-transition</code> (Lesson 03),
+<code>varied</code>, <code>flat</code> (Lesson 04).</p>
 
 <h2><span class="num">10</span>Rewrite widget (per-item drill)</h2>
 

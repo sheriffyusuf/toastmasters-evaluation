@@ -23,11 +23,12 @@ framing rather than Toastmasters', it says so.
 | **Lesson 01** | [You Are Not a Judge](lessons/0001-you-are-not-a-judge.html) | What an evaluation actually is: the feedback-versus-advice distinction, the three ingredients, and the two failure modes. 4 drills. |
 | **Lesson 02** | [The Anatomy of a Speech](lessons/0002-the-anatomy-of-a-speech.html) | The map of everything you judge: the seven core criteria, content versus delivery, the reconstruction test, and the order of repair. 4 drills. |
 | **Lesson 03** | [Purpose and Structure](lessons/0003-purpose-and-structure.html) | The content half in depth: topic versus purpose, the four general purposes and the specific-purpose standard, the seven organisational structures, and the five checks for deliberate structure. 4 drills. |
+| **Lesson 04** | [Voice: Pitch, Tone, Volume, Pace](lessons/0004-voice-pitch-tone-volume-pace.html) | The delivery half begins: the voice as a second text, the five tools and their failure signatures, the six distinctions that decide which advice helps, the Speech Profile, and the symptom-to-cause diagnosis. 4 drills. |
 | **Reference 01** | [Glossary of Terms](reference/0001-glossary.html) | Canonical vocabulary. Pitch, tone, inflection, articulation, the four gesture types, the eight organisational structures. |
 | **Reference 02** | [The Excellence Ladder](reference/0002-what-makes-an-evaluation-excellent.html) | Good, great and excellent — defined in Toastmasters' own words, for both the speech and the evaluation of it. |
 | **Reference 03** | [Evaluator's Quick Card](reference/0003-evaluators-quick-card.html) | The operational checklist. Fits on one phone screen. Open this at the meeting. |
 
-Lessons 04–09 are planned. The roadmap is on the [course home page](index.html).
+Lessons 05–09 are planned. The roadmap is on the [course home page](index.html).
 
 ## How it is built
 
